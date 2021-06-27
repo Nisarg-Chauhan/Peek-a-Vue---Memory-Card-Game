@@ -5,6 +5,10 @@
 ## Deployed Website on Netlify:
 ### https://laughing-kepler-12ce9a.netlify.app/  
 
+
+![image](https://user-images.githubusercontent.com/46188042/123531082-7d147880-d6cf-11eb-8a23-bae7459823f7.png)
+
+
 ## Project setup
 ```
 npm install
