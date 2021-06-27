@@ -21,7 +21,7 @@
       <span> & </span>
       <a
         :class="$style['powered-link']"
-        href="https://www.netlify.com/?utm_source=github&utm_medium=peekavue-bh&utm_campaign=devex"
+        href="https://www.netlify.com/"
       >
         <img
           :class="$style['powered-logo']"
