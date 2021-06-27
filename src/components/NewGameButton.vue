@@ -1,5 +1,6 @@
 <script>
 export default {
+  //Props for the NewGame button
   props: {
     newPlayer: {
       type: Boolean,
@@ -18,6 +19,7 @@ export default {
 };
 </script>
 
+<!-- If the player is new  display 'Start a new game' button or else 'Restart Game' button -->
 <template>
   <button v-if="newPlayer" @click="startNewGame" :class="$style.button">
     <div :class="$style['button-icon']">
@@ -38,6 +40,7 @@ export default {
   </button>
 </template>
 
+<!-- Style the button-->
 <style module>
 .button {
   background-color: #e78805;

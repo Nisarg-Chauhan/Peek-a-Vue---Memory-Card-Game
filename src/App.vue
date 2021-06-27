@@ -11,12 +11,16 @@ import halloweenDeck from "./data/halloweenDeck.json";
 
 export default {
   name: "App",
+
+  //Declare the components
   components: {
     AppFooter,
     AppHero,
     GameBoard,
     NewGameButton,
   },
+
+  //Setup the game
   setup() {
     const { cardList } = createDeck(halloweenDeck);
     const {
@@ -36,6 +40,7 @@ export default {
       }
     };
 
+    //Card Flipping Logic
     const flipCard = (payload) => {
       cardList.value[payload.position].visible = true;
 
@@ -53,12 +58,14 @@ export default {
       }
     };
 
+    //Watch for the card matches. If all the 8 matches are found then display confetti on the game canvas
     watch(matchesFound, (currentValue) => {
       if (currentValue === 8) {
         launchConfetti();
       }
     });
 
+    //Card matching logic
     watch(
       userSelection,
       (currentValue) => {
@@ -101,6 +108,7 @@ export default {
   <AppFooter />
 </template>
 
+<!-- Add Styling -->
 <style>
 html,
 body {

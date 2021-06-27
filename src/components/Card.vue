@@ -2,6 +2,7 @@
 import { computed } from "vue";
 
 export default {
+  // Define props for the Card
   props: {
     matched: {
       type: Boolean,
@@ -20,6 +21,8 @@ export default {
       default: false,
     },
   },
+
+  //Selects a card when user clicks on it
   setup(props, context) {
     // eslint-disable-next-line vue/return-in-computed-property
     const flippedStyles = computed(() => {
@@ -28,6 +31,7 @@ export default {
       }
     });
 
+    //Emit the cards position and its value
     const selectCard = () => {
       context.emit("select-card", {
         position: props.position,
@@ -43,6 +47,7 @@ export default {
 };
 </script>
 
+<!-- Card Template -->
 <template>
   <div class="card" :class="flippedStyles" @click="selectCard">
     <div class="card-face is-front">
@@ -58,6 +63,7 @@ export default {
   </div>
 </template>
 
+<!-- Add styling to the card -->
 <style>
 .card {
   position: relative;

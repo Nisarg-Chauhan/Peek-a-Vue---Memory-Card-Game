@@ -1,6 +1,7 @@
 import _ from "lodash";
 import { computed, ref } from "vue";
 
+//Pass the card deck as a parameter and create a new game
 export default function createGame(deck) {
   const newPlayer = ref(true);
 
@@ -10,6 +11,7 @@ export default function createGame(deck) {
     restartGame();
   };
 
+  //Restart the game and shuffle the cards
   const restartGame = () => {
     deck.value = _.shuffle(deck.value);
 
@@ -23,6 +25,8 @@ export default function createGame(deck) {
     });
   };
 
+  //If 8 card matches are found then player wins the game. Otherwise, total number of
+  //matches is shown
   const status = computed(() => {
     if (matchesFound.value === 8) {
       return "Player wins!";
@@ -31,6 +35,7 @@ export default function createGame(deck) {
     }
   });
 
+  //Find the number of matches
   const matchesFound = computed(() => {
     const matchedCards = deck.value.filter((card) => card.matched === true)
       .length;

@@ -1,5 +1,6 @@
 import confetti from "canvas-confetti";
 
+//Add confetti animation to the game canvas when player wins the game
 export const launchConfetti = () => {
   const end = Date.now() + 10 * 1000;
 

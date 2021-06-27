@@ -2,6 +2,7 @@ import { ref } from "vue";
 
 const cardList = ref([]);
 
+// Initialize Card Deck
 const initDeck = (deckData) => {
   deckData.forEach((item) => {
     cardList.value.push({
@@ -22,6 +23,7 @@ const initDeck = (deckData) => {
   });
 };
 
+//Update the position of the card after initiazing
 const updateCardPosition = () => {
   cardList.value = cardList.value.map((card, index) => {
     return {
@@ -31,6 +33,7 @@ const updateCardPosition = () => {
   });
 };
 
+//Create a card deck that returns a list of cards
 export default function createDeck(deckData) {
   initDeck(deckData);
   updateCardPosition();

@@ -2,6 +2,7 @@
 import Card from "./Card";
 
 export default {
+  //   Gameboard components and props
   components: {
     Card,
   },
@@ -27,6 +28,7 @@ export default {
 };
 </script>
 
+<!-- Display a grid of cards on the game board-->
 <template>
   <transition-group tag="section" class="game-board" name="shuffle-card">
     <Card

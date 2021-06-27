@@ -1,4 +1,7 @@
+<!-- AppHero (Header) component -->
+
 <template>
+  <!-- Display heading, image, and game information -->
   <h1 class="sr-only">Peek-a-Vue</h1>
   <img
     srcset="/images/peek-a-vue-title@2x.png 2x, /images/peek-a-vue-title.png 1x"
@@ -19,10 +22,7 @@
         Vue.js 3
       </a>
       <span> & </span>
-      <a
-        :class="$style['powered-link']"
-        href="https://www.netlify.com/?utm_source=github&utm_medium=peekavue-bh&utm_campaign=devex"
-      >
+      <a :class="$style['powered-link']" href="https://www.netlify.com/">
         <img
           :class="$style['powered-logo']"
           src="/images/netliheart.svg"
@@ -33,6 +33,8 @@
     </p>
   </section>
 </template>
+
+<!-- Add Styling -->
 
 <style module>
 .description {
