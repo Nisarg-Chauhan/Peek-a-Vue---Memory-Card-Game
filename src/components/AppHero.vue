@@ -22,7 +22,14 @@
         Vue.js 3
       </a>
       <span> & </span>
+<<<<<<< HEAD
       <a :class="$style['powered-link']" href="https://www.netlify.com/">
+=======
+      <a
+        :class="$style['powered-link']"
+        href="https://www.netlify.com/"
+      >
+>>>>>>> 0b11a33931fb44319564670bb893f885eec1a868
         <img
           :class="$style['powered-logo']"
           src="/images/netliheart.svg"
